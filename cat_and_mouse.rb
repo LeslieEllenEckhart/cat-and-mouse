@@ -1,4 +1,5 @@
-# Rubyist:  Leslie Eckhart
+# This is my submission for IO Avenue's Project1: Game On!  #
+#  Rubyist:  Leslie Eckhart
 # Date: 10/01/2017
 # File: LEEgame.rb
 # 
@@ -213,5 +214,6 @@ puts cat_loves_mouse
 puts cat_loves_mouse
 puts blank_line
 puts "Bye-Bye!"
+puts "So Long Fair Well!!"
 # end-of-game
 
