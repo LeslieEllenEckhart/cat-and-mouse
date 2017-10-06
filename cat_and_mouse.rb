@@ -53,7 +53,8 @@ end
 puts "Welcome to Leslie's Cat-n-Mouse Game!"
 puts "Are you ready to enter The House?  If so, type one of the following #{num_answers} answers:"
 puts "   The list of possible answers is:"
-puts reply_affirmative 
+print reply_affirmative
+puts "Your response is: "
 #
 #********************************************
 # Get first answer and evaluate:
@@ -81,6 +82,7 @@ until ready_loop == true
 #     puts blank_line
     puts message1
     puts message2
+    print "Your response is: "
 end # ready_loop
 #
 # puts "out of ready_loop; entering game_loop"
@@ -120,6 +122,7 @@ puts "Type CAT if you want my cat to chase away the mouse."
 puts "     Or type MOUSE if you prefer to see more of the mouse."
 puts "     Or type MOUSE CHASES CAT if you prefer to see the mouse chase the cat. ;-) "
 puts "     Or type DONE if you want to exit the game."
+print "Your response is: "
 #
 ##********************************************
 # Main Game Loop
@@ -131,7 +134,7 @@ while game_loop == true and
       game_loop_over == false
 # Get  answer2 and evaluate:
     answer2 = gets.chomp
-    puts "answer2 = #{answer2}"
+#    puts "answer2 = #{answer2}"
 #
     case answer2
     when "CAT", "Cat", "cat"    
@@ -160,6 +163,7 @@ while game_loop == true and
         puts cat_2
         puts cat_1
         puts "For more, type CAT, MOUSE, MOUSE CHASES CAT or DONE"
+        print "Your response is: "
     when "MOUSE CHASES CAT"
         puts "Here comes the cat!"
         puts cat_1
@@ -175,6 +179,7 @@ while game_loop == true and
         puts mouse_cat_4
         puts "Oh my!" 
         puts "For more, type CAT, MOUSE, MOUSE CHASES CAT or DONE"
+        print "Your response is: "
     when "MOUSE", "Mouse", "mouse" 
 #     when reply_mouse.include? answer2  
         puts "Here comes the mouse again!"
@@ -196,12 +201,14 @@ while game_loop == true and
         puts mouse_7
         puts mouse_8
         puts "For more, type CAT, MOUSE, MOUSE CHASES CAT or DONE"
+        print "Your response is: "
     when "DONE", "Done", "done", "EXIT", "Exit", "exit", "QUIT", "Quit", "quit"
 #     when reply_done.include? answer2
         game_loop_over = true
     else
         puts "Cannot decide?"
         puts "Type CAT, MOUSE, MOUSE CHASES CAT or DONE"
+        print "Your response is: "
     end
 end # game_loop
 #
